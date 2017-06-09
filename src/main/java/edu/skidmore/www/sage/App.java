@@ -7,22 +7,22 @@ import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 
 /**
- * Hello world!
+ * Just a test class for now.
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        Model m = ModelFactory.createDefaultModel();
-        String NS = "http://example/com/test/";
-        
-        Resource r = m.createResource( NS + "r" );
-        Property p = m.createProperty( NS + "p" );
-        
-        r.addProperty(p, "hello world", XSDDatatype.XSDstring);
-        
-        m.write( System.out, "Turtle");
+//        Model m = ModelFactory.createDefaultModel();
+//        String NS = "http://example/com/test/";
+//        
+//        Resource r = m.createResource( NS + "r" );
+//        Property p = m.createProperty( NS + "p" );
+//        
+//        r.addProperty(p, "hello world", XSDDatatype.XSDstring);
+//        
+//        m.write( System.out, "Turtle");
     }
     
 
