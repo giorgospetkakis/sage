@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-arq/target/jena-arq-3.4.0-SNAPSHOT.jar" sourcepath="/home/giorgos/workspace/jena/jena-arq/target/jena-arq-3.4.0-SNAPSHOT-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/home/giorgos/workspace/jena/jena-arq/target/jena-arq-3.4.0-SNAPSHOT-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-base/target/jena-base-3.4.0-SNAPSHOT.jar" sourcepath="/jena/jena-base/target/jena-base-3.4.0-SNAPSHOT-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/jena/jena-base/target/jena-base-3.4.0-SNAPSHOT-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-cmds/target/jena-cmds-3.4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-core/target/jena-core-3.4.0-SNAPSHOT.jar" sourcepath="/jena/jena-core/target/jena-core-3.4.0-SNAPSHOT-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/jena/jena-core/target/jena-core-3.4.0-SNAPSHOT-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-csv/target/jena-csv-3.4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-fuseki2/jena-fuseki-core/target/jena-fuseki-core-2.7.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-fuseki2/jena-fuseki-embedded/target/jena-fuseki-embedded-2.7.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-fuseki2/jena-fuseki-server/target/jena-fuseki-server-2.7.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-iri/target/jena-iri-3.4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-rdfconnection/target/jena-rdfconnection-3.4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-shaded-guava/target/jena-shaded-guava-3.4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-tdb/target/jena-tdb-3.4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/giorgos/workspace/jena/jena-text/target/jena-text-3.4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
