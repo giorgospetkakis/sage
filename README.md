@@ -1,5 +1,5 @@
  # SAGE
-_A Semantic Platform for Steam_
+_A Semantics Platform for Steam_
 
 The purpose of Sage is to gain better insight of the [Steam Community](http://community.steampowered.com/) and attempt to provide more informed game recommendations through the Steam Store.
 
