@@ -1,7 +1,5 @@
 /**
- * 
- */
-/**
+ * Package containing the reasoning ruleset.
  * @author giorgos
  *
  */

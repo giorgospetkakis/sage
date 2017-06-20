@@ -45,8 +45,7 @@ SAGE aims to create a 'living-breathing' ontology of all Steam players that grou
 | ----------------- |---------------|
 | Initial Prototype | June 23, 2017 |
 | Reasoner Ruleset  | July 7, 2017  |
-| Jena Connection   | July 14, 2017 |
-| Inference Engine  | July 21, 2017 |
-| Input / Output    | July 28, 2017 |
+| Inference Engine  | July 14, 2017 |
+| Input / Output    | July 21, 2017 |
 
 #### CONCLUSIONS
