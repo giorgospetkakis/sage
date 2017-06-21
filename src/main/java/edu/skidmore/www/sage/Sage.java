@@ -1,19 +1,21 @@
 package edu.skidmore.www.sage;
 
-import java.io.PrintWriter;
+import org.apache.jena.ontology.OntModel;
+
+import edu.skidmore.www.sage.reasoner.impl.Reasoner;
 
 /**
- * Just a test class for now.
+ * The main class for the SAGE project.
+ * 
+ * @author giorgospetkakis
  *
  */
 public class Sage 
 {
+	static OntModel model;
     public static void main( String[] args )
     {
-        System.setProperty("line.separator", "xxx");
-        PrintWriter pw = new PrintWriter(System.out);
-        pw.println("foo");
-        pw.println("bar");
-        pw.flush();
+    	model = Reasoner.getInstance().getModel();
+    	PrintWriter.
     }
 }

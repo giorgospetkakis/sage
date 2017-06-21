@@ -41,11 +41,11 @@ SAGE aims to create a 'living-breathing' ontology of all Steam players that grou
 
 **Schedule**
 
-| Task              | Deadline      |
-| ----------------- |---------------|
-| Initial Prototype | June 23, 2017 |
-| Reasoner Ruleset  | July 7, 2017  |
-| Inference Engine  | July 14, 2017 |
-| Input / Output    | July 21, 2017 |
+| Task              | Deadline      | Status        |
+| ----------------- |---------------|---------------|
+| Initial Prototype | June 23, 2017 |In Progress    |
+| Reasoner Ruleset  | July 7, 2017  |Not Started    |
+| Inference Engine  | July 14, 2017 |Not Started    |
+| Input / Output    | July 21, 2017 |Not Started    |
 
 #### CONCLUSIONS

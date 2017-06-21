@@ -1,10 +1,11 @@
-package edu.skidmore.www.sage.reasoner;
+package edu.skidmore.www.sage.reasoner.impl;
 
+import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
 
-import edu.skidmore.www.sage.reasoner.impl.Axioms;
+import edu.skidmore.www.sage.reasoner.RDFImport;
 
 /**
  * The main ontology class- Holds graph information and coordinates inferencing.
@@ -14,8 +15,8 @@ import edu.skidmore.www.sage.reasoner.impl.Axioms;
  */
 public class Reasoner implements RDFImport {
 	
-	private Model model;
-	private Reasoner instance;
+	private static OntModel model;
+	private static Reasoner instance;
 	private Reasoner() {
 		
 	}
@@ -45,22 +46,29 @@ public class Reasoner implements RDFImport {
 	
 	/**
 	 * 
-	 * @return The singleton instance of the Reasoner
+	 * @return The singleton instance of the Reasoner.
 	 */
-	public Reasoner getInstance(){
-		if(instance != this){
-			instance = this;
+	public static Reasoner getInstance(){
+		if(model == null){
+			init();
 		}
 		return instance;
+	}
+	
+	/**
+	 * 
+	 * @return The model of the of the Reasoner.
+	 */
+	public OntModel getModel(){
+		return model;
 	}
 	
 	/**
 	 * Initializes the Reasoner class.
 	 * 
 	 */
-	public void init() {
-		model = ModelFactory.createDefaultModel();
-		model = loadAxiomModel(model);
+	private static void init() {
+		model = loadAxiomModel();
 	}
 	
 	/**
@@ -69,9 +77,9 @@ public class Reasoner implements RDFImport {
 	 * @param model
 	 * @return The model union
 	 */
-	public Model loadAxiomModel(Model model){
+	private static OntModel loadAxiomModel(){
 		try {
-			return ModelFactory.createUnion(model, Axioms.getModel());
+			return Axioms.getModel();
 		} catch (NullPointerException e) {
 			System.err.println("Could not load axioms model");
 			return model;
