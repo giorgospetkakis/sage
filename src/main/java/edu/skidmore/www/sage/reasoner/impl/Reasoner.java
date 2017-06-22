@@ -13,7 +13,7 @@ import edu.skidmore.www.sage.reasoner.RDFImport;
  * @author giorgospetkakis
  *
  */
-public class Reasoner implements RDFImport {
+public class Reasoner {
 	
 	private static OntModel model;
 	private static Reasoner instance;
@@ -21,12 +21,15 @@ public class Reasoner implements RDFImport {
 		
 	}
 	
+	static {
+		init();
+	}
+	
 	//===================================
 	//Interface Methods
 	//===================================
 	
 	public void addPlayer(Resource player) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -49,9 +52,6 @@ public class Reasoner implements RDFImport {
 	 * @return The singleton instance of the Reasoner.
 	 */
 	public static Reasoner getInstance(){
-		if(model == null){
-			init();
-		}
 		return instance;
 	}
 	
@@ -68,6 +68,7 @@ public class Reasoner implements RDFImport {
 	 * 
 	 */
 	private static void init() {
+		instance = new Reasoner();
 		model = loadAxiomModel();
 	}
 	
