@@ -1,4 +1,4 @@
-package edu.skidmore.www.sage.reasoner;
+package com.github.giorgospetkakis.sage.reasoner;
 
 /**
  * An interface for importing the player / game beans onto the reasoner platform.

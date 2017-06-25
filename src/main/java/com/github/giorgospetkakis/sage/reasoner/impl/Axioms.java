@@ -1,4 +1,4 @@
-package edu.skidmore.www.sage.reasoner.impl;
+package com.github.giorgospetkakis.sage.reasoner.impl;
 
 import org.apache.jena.ontology.DatatypeProperty;
 import org.apache.jena.ontology.InverseFunctionalProperty;

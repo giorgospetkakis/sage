@@ -3,4 +3,4 @@
  * @author giorgos
  *
  */
-package edu.skidmore.www.sage.reasoner;
+package com.github.giorgospetkakis.sage.reasoner;

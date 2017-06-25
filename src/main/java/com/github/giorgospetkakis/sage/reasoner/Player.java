@@ -1,4 +1,4 @@
-package edu.skidmore.www.sage.reasoner;
+package com.github.giorgospetkakis.sage.reasoner;
 
 /**
  * Internal wrapper class for a single player's data.
@@ -9,6 +9,9 @@ package edu.skidmore.www.sage.reasoner;
  */
 public class Player {
 	
+	private static final String BASE_URI = "http://steamcommunity.com/id/";
+	
+	private String uri;
 	private String id;
 	private String firstName;
 	private String lastName;
@@ -16,6 +19,9 @@ public class Player {
 	private String[] gamesOwned;
 	private String[] friends;
 	
+	//=================
+	//CONSTRUCTORS
+	//=================
 	/**
 	 * Creates a new player object. Used for internal data processing only.
 	 * 
@@ -28,6 +34,7 @@ public class Player {
 	 */
 	public Player(String id, String firstName, String lastName, String nickName, String[] gamesOwned, String[] friends){
 		this.id = id;
+		this.uri = BASE_URI + id + "/";
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.nickName = nickName;
@@ -42,8 +49,45 @@ public class Player {
 	 */
 	public Player(String id){
 		this.id = id;
+		this.uri = BASE_URI + id + "/";
 	}
 	
+	//=================
+	//UTILITY METHODS
+	//=================
+	
+	/**
+	 * Use player ids to generate player array.
+	 * 
+	 * @param ids
+	 * @return
+	 */
+	public static Player[] toPlayerArray(String[] ids) {
+		Player[] ps = new Player[ids.length];
+		for(int i = 0; i < ids.length; i++){
+			ps[i] = new Player(ids[i]);
+		}
+		return ps;
+	}
+	
+	//=================
+	//SETTERS + GETTERS
+	//=================
+	
+	/**
+	 * @return the uri
+	 */
+	protected String getUri() {
+		return uri;
+	}
+
+	/**
+	 * @param uri the uri to set
+	 */
+	protected void setUri(String uri) {
+		this.uri = uri;
+	}
+
 	/**
 	 * @return the id
 	 */
@@ -115,19 +159,5 @@ public class Player {
 	 */
 	protected void setFriends(String[] friends) {
 		this.friends = friends;
-	}
-	
-	/**
-	 * Use player ids to generate player array.
-	 * 
-	 * @param ids
-	 * @return
-	 */
-	public static Player[] toPlayerArray(String[] ids) {
-		Player[] ps = new Player[ids.length];
-		for(int i = 0; i < ids.length; i++){
-			ps[i] = new Player(ids[i]);
-		}
-		return ps;
 	}
 }

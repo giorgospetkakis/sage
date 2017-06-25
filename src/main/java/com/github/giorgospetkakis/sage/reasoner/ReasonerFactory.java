@@ -1,4 +1,4 @@
-package edu.skidmore.www.sage.reasoner;
+package com.github.giorgospetkakis.sage.reasoner;
 
 /**
  * Factory for the reasoner class. Recommended way to add data to the ontology.

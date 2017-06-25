@@ -1,8 +1,8 @@
-package edu.skidmore.www.sage;
+package com.github.giorgospetkakis.sage;
 
-import edu.skidmore.www.sage.reasoner.Game;
-import edu.skidmore.www.sage.reasoner.Player;
-import edu.skidmore.www.sage.reasoner.ReasonerFactory;
+import com.github.giorgospetkakis.sage.reasoner.Game;
+import com.github.giorgospetkakis.sage.reasoner.Player;
+import com.github.giorgospetkakis.sage.reasoner.ReasonerFactory;
 
 /**
  * The main class for the SAGE Project.

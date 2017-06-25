@@ -1,12 +1,10 @@
-package edu.skidmore.www.sage.reasoner;
+package com.github.giorgospetkakis.sage.reasoner;
 
 import org.apache.jena.ontology.OntModel;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.log4j.Logger;
 
-import edu.skidmore.www.sage.reasoner.impl.Axioms;
+import com.github.giorgospetkakis.sage.reasoner.impl.Axioms;
 
 /**
  * The main ontology class- Holds graph information and coordinates inferencing.
@@ -37,21 +35,21 @@ public class Reasoner {
 	//===================================
 	
 	protected void addPlayer(Player player) {
-		model.createResource(NS + player.getId()).addProperty(Axioms.hasUserID, player.getId());
+		model.createResource(player.getUri()).addProperty(Axioms.hasUserID, player.getId());
 	}
 
 	protected void addFriends(Player player, Player[] friends) {
-		Resource pl = model.createResource(NS + player.getId());
+		Resource pl = model.createResource(player.getUri());
 		for(Player p : friends) {
-			Resource f = model.createResource(NS + p.getId());
+			Resource f = model.createResource(p.getUri());
 			pl.addProperty(Axioms.hasFriend, f);
 		}
 	}
 
 	protected void addOwnedGames(Player player, Game[] games) {
-		Resource pl = model.createResource(NS + player.getId());
+		Resource pl = model.createResource(player.getUri());
 		for(Game g : games) {
-			Resource gameR = model.createResource(NS + g.getId());
+			Resource gameR = model.createResource(g.getUri());
 			pl.addProperty(Axioms.owns, gameR);
 		}
 	}
@@ -81,7 +79,7 @@ public class Reasoner {
 	}
 	
 	/**
-	 * Returns a union of the existing model and the project axioms.
+	 * Handles loading the Axiom Model.
 	 * 
 	 * @param model
 	 * @return The model union
