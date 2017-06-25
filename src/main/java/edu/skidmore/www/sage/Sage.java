@@ -1,12 +1,8 @@
 package edu.skidmore.www.sage;
 
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.Resource;
-
+import edu.skidmore.www.sage.reasoner.Game;
+import edu.skidmore.www.sage.reasoner.Player;
 import edu.skidmore.www.sage.reasoner.ReasonerFactory;
-import edu.skidmore.www.sage.reasoner.impl.Axioms;
 
 /**
  * The main class for the SAGE Project.
@@ -16,7 +12,8 @@ import edu.skidmore.www.sage.reasoner.impl.Axioms;
  */
 public class Sage 
 {
-	static OntModel model;
+	static ReasonerFactory factory = new ReasonerFactory();
+	
     public static void main( String[] args )
     {
     	String[] ids = {
@@ -36,18 +33,51 @@ public class Sage
     			"76561197960273963",
     			"76561197960274006",
     			"76561197960274521",
-    			"76561197960277670"
+    			"76561197960277670",
     	};
     	
-    	model = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_RULE_INF);
-    	Resource t = model.createResource().addProperty(Axioms.hasUserID, "76561197960279106");
-    	ReasonerFactory.getInstance().addPlayer(t);
+    	String [] appids = {
+    			"2900",
+    			"301111",
+    			"421880",
+    			"371440",
+    			"319280",
+    			"31970",
+    			"390399",
+    			"97308",
+    			"81862",
+    			"214100",
+    			"282516",
+    			"406422",
+    			"385520",
+    			"301910",
+    			"400984",
+    			"569160",
+    			"316500",
+    			"540800",
+    			"10545",
+    			"525816",
+    			"287980",
+    			"541310",
+    			"564070",
+    			"598710",
+    			"91603",
+    			"429904",
+    	};
     	
     	for(String s : ids) {
-    		Resource pl = model.createResource().addProperty(Axioms.hasUserID, s);
-    		pl.addProperty(Axioms.hasFriend, t);
-    		ReasonerFactory.getInstance().addPlayer(pl);
+    		Player p = new Player(s);
+    		factory.addPlayer(p);
     	}
-    	model.writeAll(System.out, "TURTLE");
+    	
+    	Player f = new Player("76561197960279106");
+    	factory.addFriends(f, Player.toPlayerArray(ids));
+    	factory.addOwnedGames(f, Game.toGameArray(appids));
+    	
+    	Player f2 = new Player("76561197960279107");
+    	factory.addFriends(f2, Player.toPlayerArray(ids));
+    	factory.addOwnedGames(f2, Game.toGameArray(appids));
+    	
+    	factory.writeAll();
     }
 }
