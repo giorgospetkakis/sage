@@ -1,5 +1,10 @@
 package com.github.giorgospetkakis.sage.reasoner;
 
+import java.io.FileNotFoundException;
+
+import com.github.koraktor.steamcondenser.community.SteamGame;
+import com.github.koraktor.steamcondenser.community.SteamId;
+
 /**
  * Factory for the reasoner class. Recommended way to add data to the ontology.
  * 
@@ -8,19 +13,26 @@ package com.github.giorgospetkakis.sage.reasoner;
  */
 public class ReasonerFactory implements RDFImport {
 	
+	private Reasoner r;
+	
 	public ReasonerFactory() {
-		
+		r = new Reasoner();
 	}
 	
-	public void addPlayer(Player player) 
-	{ Reasoner.getInstance().addPlayer(player); }
+	public void addPlayer(SteamId player) 
+	{ r.addPlayer(player); }
 	
-	public void addFriends(Player player, Player[] friends) 
-	{ Reasoner.getInstance().addFriends(player, friends); }
-	
-	public void addOwnedGames(Player player, Game[] games) 
-	{ Reasoner.getInstance().addOwnedGames(player, games); }
+	public void addGame(SteamGame game) 
+	{ r.addGame(game); }
 	
 	public void writeAll()
-	{ Reasoner.getInstance().writeAll(); }
+	{ r.writeAll(); }
+
+	public void write() 
+	{ r.write(); }
+	
+	public void export(String file) throws FileNotFoundException 
+	{ r.export(file); }
+
+
 }

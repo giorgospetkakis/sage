@@ -1,0 +1,1630 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:domain  a              rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Property , rdfs:Resource ;
+        rdfs:range          rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:domain .
+
+owl:DatatypeProperty  a  rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdf:Property .
+
+owl:Property  a              rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource , owl:Property ;
+        owl:equivalentClass  owl:Property .
+
+<http://github.com/giorgospetkakis/sage/#hasUserID>
+        a                   rdf:Property , owl:FunctionalProperty , owl:InverseFunctionalProperty , rdfs:Resource , owl:ObjectProperty ;
+        rdfs:domain         "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#UserID> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasUserID> .
+
+owl:imports  a              owl:OntologyProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Ontology , rdfs:Resource ;
+        rdfs:range          owl:Ontology , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:imports .
+
+xsd:negativeInteger  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+owl:ObjectProperty  a    rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdf:Property .
+
+owl:intersectionOf  a       rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:intersectionOf .
+
+owl:backwardCompatibleWith
+        a                   rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Ontology , rdfs:Resource ;
+        rdfs:range          owl:Ontology , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:backwardCompatibleWith .
+
+owl:Ontology  a              rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource , owl:Ontology ;
+        owl:equivalentClass  owl:Ontology .
+
+xsd:unsignedLong  a          rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:unsignedLong , xsd:integer , xsd:long , xsd:nonNegativeInteger ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:unsignedLong .
+
+rdf:first  a                rdf:Property , owl:FunctionalProperty , rdfs:Resource ;
+        rdfs:domain         rdf:List , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:first .
+
+<http://xmlns.com/foaf/spec/#term_fullName>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://xmlns.com/foaf/spec/#term_fullName> , owl:Thing ;
+        owl:equivalentClass  <http://xmlns.com/foaf/spec/#term_fullName> .
+
+owl:onProperty  a           rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Restriction , owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:range          owl:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:onProperty .
+
+owl:differentFrom  a        owl:SymmetricProperty , rdf:Property , owl:ObjectProperty , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:differentFrom .
+
+<http://github.com/giorgospetkakis/sage/#TagID>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#TagID> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#TagID> .
+
+<http://github.com/giorgospetkakis/sage/#MetaGroup>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#MetaGroup> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#MetaGroup> .
+
+rdf:object  a               rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:object .
+
+rdfs:subPropertyOf  a       rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Property , rdfs:Resource ;
+        rdfs:range          rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:subPropertyOf .
+
+owl:disjointWith  a         owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:range          owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:disjointWith .
+
+<http://github.com/giorgospetkakis/sage/#Tag>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#Tag> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#Tag> .
+
+rdf:Alt  a               rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Container .
+
+owl:Class  a                 rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:equivalentClass  owl:Class .
+
+xsd:duration  a           rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+rdf:List  a                  rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource , rdf:List ;
+        owl:equivalentClass  rdf:List .
+
+<http://xmlns.com/foaf/spec/#term_nick>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://xmlns.com/foaf/spec/#term_nick> , owl:Thing ;
+        owl:equivalentClass  <http://xmlns.com/foaf/spec/#term_nick> .
+
+rdf:Statement  a             rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource , rdf:Statement ;
+        owl:equivalentClass  rdf:Statement .
+
+rdf:Seq  a               rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Container .
+
+xsd:double  a   rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+xsd:gMonth  a   rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+owl:FunctionalProperty
+        a                rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdf:Property .
+
+xsd:unsignedByte  a          rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:byte , xsd:short , xsd:unsignedByte , xsd:nonNegativeInteger , xsd:unsignedShort ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:unsignedByte .
+
+owl:SymmetricProperty
+        a                rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  owl:ObjectProperty .
+
+<http://github.com/giorgospetkakis/sage/#owns>
+        a                   rdf:Property , owl:DatatypeProperty , rdfs:Resource ;
+        rdfs:domain         "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#owns> ;
+        owl:inverseOf       <http://github.com/giorgospetkakis/sage/#isOwned> .
+
+xsd:gMonthDay  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdfs:ContainerMembershipProperty
+        a                rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdf:Property .
+
+owl:inverseOf  a            rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:inverseOf .
+
+rdf:Property  a              rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource , rdf:Property ;
+        owl:equivalentClass  rdf:Property .
+
+xsd:nonNegativeInteger
+        a                    rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:integer , xsd:nonNegativeInteger ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:nonNegativeInteger .
+
+owl:sameAs  a               owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:sameAs .
+
+rdf:XMLLiteral  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+xsd:unsignedShort  a         rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:short , xsd:nonNegativeInteger , xsd:unsignedShort ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:unsignedShort .
+
+<http://github.com/giorgospetkakis/sage/#TagDescription>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#TagDescription> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#TagDescription> .
+
+xsd:gDay  a     rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdf:nil  a      rdf:List , rdfs:Resource .
+
+rdfs:range  a               rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Property , rdfs:Resource ;
+        rdfs:range          rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:range .
+
+rdfs:isDefinedBy  a         rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:seeAlso , rdfs:isDefinedBy .
+
+xsd:boolean  a            rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:nonPositiveInteger .
+
+owl:Nothing  a               owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:Thing , rdfs:Resource , owl:Nothing ;
+        owl:equivalentClass  owl:Nothing .
+
+owl:InverseFunctionalProperty
+        a                rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  owl:ObjectProperty .
+
+xsd:hexBinary  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+owl:oneOf  a                rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:oneOf .
+
+rdf:Bag  a               rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdfs:Container .
+
+<http://github.com/giorgospetkakis/sage/#Title>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#Title> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#Title> .
+
+<http://github.com/giorgospetkakis/sage/#AppID>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#AppID> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#AppID> .
+
+xsd:decimal  a            rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:disjointWith  xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean .
+
+<http://github.com/giorgospetkakis/sage/#MetaGroupID>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#MetaGroupID> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#MetaGroupID> .
+
+xsd:dateTime  a           rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+<http://github.com/giorgospetkakis/sage/#hasFriend>
+        a                   rdf:Property , owl:SymmetricProperty , rdfs:Resource , owl:ObjectProperty ;
+        rdfs:domain         "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:range          "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasFriend> .
+
+xsd:date  a               rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+xsd:int  a                   rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:int , xsd:integer , xsd:long ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:int .
+
+<http://github.com/giorgospetkakis/sage/#isTagOf>
+        a                   owl:DatatypeProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#Tag> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#isTagOf> ;
+        owl:inverseOf       <http://github.com/giorgospetkakis/sage/#hasTag> .
+
+rdf:predicate  a            rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:predicate .
+
+xsd:gYear  a    rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+owl:Thing  a                 owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:Thing , rdfs:Resource ;
+        owl:equivalentClass  owl:Thing .
+
+owl:incompatibleWith  a     rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Ontology , rdfs:Resource ;
+        rdfs:range          owl:Ontology , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:incompatibleWith .
+
+<http://github.com/giorgospetkakis/sage/#isFavoredBy>
+        a                   owl:DatatypeProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        rdfs:range          "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#isFavoredBy> ;
+        owl:inverseOf       <http://github.com/giorgospetkakis/sage/#hasFavorite> .
+
+owl:OntologyProperty  a  rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdf:Property .
+
+<http://github.com/giorgospetkakis/sage/#isOwned>
+        a                   owl:DatatypeProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        rdfs:range          "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#isOwned> ;
+        owl:inverseOf       <http://github.com/giorgospetkakis/sage/#owns> .
+
+owl:priorVersion  a         rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Ontology , rdfs:Resource ;
+        rdfs:range          owl:Ontology , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:priorVersion .
+
+rdfs:subClassOf  a          rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdfs:Class , rdfs:Resource ;
+        rdfs:range          rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:subClassOf .
+
+rdfs:Resource  a             rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource ;
+        owl:equivalentClass  rdfs:Resource .
+
+rdf:rest  a                 rdf:Property , owl:FunctionalProperty , rdfs:Resource ;
+        rdfs:domain         rdf:List , rdfs:Resource ;
+        rdfs:range          rdf:List , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:rest .
+
+owl:TransitiveProperty
+        a                rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  owl:ObjectProperty .
+
+owl:equivalentClass  a      rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:range          owl:Class , rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:equivalentClass .
+
+xsd:short  a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:int , xsd:integer , xsd:long , xsd:short ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:short .
+
+xsd:positiveInteger  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+rdf:type  a                 rdf:Property , rdfs:Resource ;
+        rdfs:range          rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:type .
+
+rdfs:Class  a                rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource , rdfs:Class ;
+        owl:equivalentClass  rdfs:Class .
+
+owl:versionInfo  a  owl:AnnotationProperty .
+
+rdfs:Datatype  a         rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Class .
+
+xsd:anyURI  a   rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+xsd:long  a                  rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:integer , xsd:long ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:long .
+
+<http://github.com/giorgospetkakis/sage/#hasNickname>
+        a                   rdf:Property , owl:DatatypeProperty , rdfs:Resource ;
+        rdfs:domain         "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://xmlns.com/foaf/spec/#term_nick> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasNickname> .
+
+xsd:base64Binary  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+<http://github.com/giorgospetkakis/sage/#Player>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#Player> .
+
+xsd:unsignedInt  a           rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:nonNegativeInteger ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:unsignedInt .
+
+<http://github.com/giorgospetkakis/sage/#hasFullName>
+        a                   rdf:Property , owl:FunctionalProperty , owl:DatatypeProperty , rdfs:Resource ;
+        rdfs:domain         "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://xmlns.com/foaf/spec/#term_fullName> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasFullName> .
+
+<http://github.com/giorgospetkakis/sage/#Game>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#Game> .
+
+rdf:subject  a              rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:subject .
+
+xsd:byte  a                  rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:int , xsd:integer , xsd:long , xsd:byte , xsd:short ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:byte .
+
+xsd:integer  a               rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:decimal , xsd:integer ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:integer .
+
+xsd:time  a               rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+rdfs:Literal  a              rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource , rdfs:Literal ;
+        owl:equivalentClass  rdfs:Literal .
+
+xsd:float  a              rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+owl:Restriction  a           rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      owl:Class , rdfs:Resource , owl:Restriction ;
+        owl:equivalentClass  owl:Restriction .
+
+<http://github.com/giorgospetkakis/sage/#UserID>
+        a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , <http://github.com/giorgospetkakis/sage/#UserID> , owl:Thing ;
+        owl:equivalentClass  <http://github.com/giorgospetkakis/sage/#UserID> .
+
+xsd:nonPositiveInteger
+        a                 rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean .
+
+xsd:gYearMonth  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+xsd:string  a             rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+<http://steamcommunity.com/id/RastaBacon>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/profiles/76561198043022832> , <http://steamcommunity.com/profiles/76561198103642496> , <http://steamcommunity.com/profiles/76561198110579392> , <http://steamcommunity.com/profiles/76561198136463344> , <http://steamcommunity.com/profiles/76561198098552240> , <http://steamcommunity.com/profiles/76561198106171184> , <http://steamcommunity.com/profiles/76561198064892576> , <http://steamcommunity.com/profiles/76561198118183184> , <http://steamcommunity.com/profiles/76561198088716752> , <http://steamcommunity.com/profiles/76561198235712016> , <http://steamcommunity.com/profiles/76561198275585296> , <http://steamcommunity.com/profiles/76561198168731280> , <http://steamcommunity.com/profiles/76561198212248688> , <http://steamcommunity.com/profiles/76561198288683200> , <http://steamcommunity.com/profiles/76561198050032528> , <http://steamcommunity.com/profiles/76561198153729712> , <http://steamcommunity.com/profiles/76561198198806032> , <http://steamcommunity.com/profiles/76561198274295792> , <http://steamcommunity.com/profiles/76561198161384832> , <http://steamcommunity.com/profiles/76561198317334336> , <http://steamcommunity.com/profiles/76561198287740128> , <http://steamcommunity.com/profiles/76561198355682912> , <http://steamcommunity.com/profiles/76561198079968832> , <http://steamcommunity.com/profiles/76561198308769424> , <http://steamcommunity.com/profiles/76561198058196720> , <http://steamcommunity.com/profiles/76561198278239968> , <http://steamcommunity.com/profiles/76561197994424048> , <http://steamcommunity.com/profiles/76561198169214416> , <http://steamcommunity.com/profiles/76561198119487776> ;
+        <http://github.com/giorgospetkakis/sage/#hasFullName>
+                "85 BOI" ;
+        <http://github.com/giorgospetkakis/sage/#hasNickname>
+                "What" ;
+        <http://github.com/giorgospetkakis/sage/#hasUserID>
+                "RastaBacon" ;
+        <http://github.com/giorgospetkakis/sage/#owns>
+                <http://store.steampowered.com/app/12210> , <http://store.steampowered.com/app/321040> , <http://store.steampowered.com/app/20500> , <http://store.steampowered.com/app/40380> , <http://store.steampowered.com/app/259080> , <http://store.steampowered.com/app/219150> , <http://store.steampowered.com/app/113400> , <http://store.steampowered.com/app/346010> , <http://store.steampowered.com/app/346900> , <http://store.steampowered.com/app/291480> , <http://store.steampowered.com/app/243870> , <http://store.steampowered.com/app/214420> , <http://store.steampowered.com/app/11390> , <http://store.steampowered.com/app/271290> , <http://store.steampowered.com/app/266430> , <http://store.steampowered.com/app/343330> , <http://store.steampowered.com/app/12100> , <http://store.steampowered.com/app/250420> , <http://store.steampowered.com/app/225540> , <http://store.steampowered.com/app/291550> , <http://store.steampowered.com/app/298240> , <http://store.steampowered.com/app/264710> , <http://store.steampowered.com/app/271590> , <http://store.steampowered.com/app/338180> , <http://store.steampowered.com/app/4000> , <http://store.steampowered.com/app/302590> , <http://store.steampowered.com/app/24200> , <http://store.steampowered.com/app/322500> , <http://store.steampowered.com/app/280790> , <http://store.steampowered.com/app/581200> , <http://store.steampowered.com/app/436520> , <http://store.steampowered.com/app/12250> , <http://store.steampowered.com/app/24960> , <http://store.steampowered.com/app/304930> , <http://store.steampowered.com/app/46500> , <http://store.steampowered.com/app/12230> , <http://store.steampowered.com/app/2420> , <http://store.steampowered.com/app/267940> , <http://store.steampowered.com/app/444090> , <http://store.steampowered.com/app/44690> , <http://store.steampowered.com/app/207020> , <http://store.steampowered.com/app/238070> , <http://store.steampowered.com/app/218620> , <http://store.steampowered.com/app/301520> , <http://store.steampowered.com/app/497180> , <http://store.steampowered.com/app/21960> , <http://store.steampowered.com/app/223470> , <http://store.steampowered.com/app/310370> , <http://store.steampowered.com/app/385270> , <http://store.steampowered.com/app/22470> , <http://store.steampowered.com/app/1840> , <http://store.steampowered.com/app/293500> , <http://store.steampowered.com/app/333930> , <http://store.steampowered.com/app/307690> , <http://store.steampowered.com/app/12120> , <http://store.steampowered.com/app/258180> , <http://store.steampowered.com/app/335330> , <http://store.steampowered.com/app/6880> , <http://store.steampowered.com/app/397100> , <http://store.steampowered.com/app/6860> , <http://store.steampowered.com/app/24240> , <http://store.steampowered.com/app/457330> , <http://store.steampowered.com/app/209870> , <http://store.steampowered.com/app/239220> , <http://store.steampowered.com/app/327890> , <http://store.steampowered.com/app/210770> , <http://store.steampowered.com/app/218230> , <http://store.steampowered.com/app/9480> , <http://store.steampowered.com/app/578310> , <http://store.steampowered.com/app/227300> , <http://store.steampowered.com/app/417860> , <http://store.steampowered.com/app/351800> , <http://store.steampowered.com/app/368720> , <http://store.steampowered.com/app/211740> , <http://store.steampowered.com/app/359800> , <http://store.steampowered.com/app/9930> , <http://store.steampowered.com/app/209520> , <http://store.steampowered.com/app/267960> , <http://store.steampowered.com/app/336250> , <http://store.steampowered.com/app/12600> , <http://store.steampowered.com/app/368900> , <http://store.steampowered.com/app/338000> , <http://store.steampowered.com/app/342980> , <http://store.steampowered.com/app/204630> , <http://store.steampowered.com/app/70000> , <http://store.steampowered.com/app/342480> , <http://store.steampowered.com/app/72740> , <http://store.steampowered.com/app/224600> , <http://store.steampowered.com/app/39000> , <http://store.steampowered.com/app/19900> , <http://store.steampowered.com/app/338540> , <http://store.steampowered.com/app/11020> , <http://store.steampowered.com/app/200210> , <http://store.steampowered.com/app/407840> , <http://store.steampowered.com/app/1250> , <http://store.steampowered.com/app/6060> , <http://store.steampowered.com/app/2700> , <http://store.steampowered.com/app/12240> , <http://store.steampowered.com/app/2430> , <http://store.steampowered.com/app/332070> , <http://store.steampowered.com/app/208090> , <http://store.steampowered.com/app/596350> , <http://store.steampowered.com/app/65780> , <http://store.steampowered.com/app/241560> , <http://store.steampowered.com/app/12220> , <http://store.steampowered.com/app/9900> , <http://store.steampowered.com/app/8190> , <http://store.steampowered.com/app/730> , <http://store.steampowered.com/app/236390> , <http://store.steampowered.com/app/530700> , <http://store.steampowered.com/app/302830> , <http://store.steampowered.com/app/354850> , <http://store.steampowered.com/app/292410> , <http://store.steampowered.com/app/304050> , <http://store.steampowered.com/app/35420> , <http://store.steampowered.com/app/104700> , <http://store.steampowered.com/app/343840> , <http://store.steampowered.com/app/223750> , <http://store.steampowered.com/app/2400> , <http://store.steampowered.com/app/248570> , <http://store.steampowered.com/app/12110> , <http://store.steampowered.com/app/51100> , <http://store.steampowered.com/app/105600> , <http://store.steampowered.com/app/293540> , <http://store.steampowered.com/app/212070> , <http://store.steampowered.com/app/331710> , <http://store.steampowered.com/app/109400> , <http://store.steampowered.com/app/537180> , <http://store.steampowered.com/app/308580> , <http://store.steampowered.com/app/46510> , <http://store.steampowered.com/app/500290> , <http://store.steampowered.com/app/263060> , <http://store.steampowered.com/app/65730> , <http://store.steampowered.com/app/206210> , <http://store.steampowered.com/app/265300> , <http://store.steampowered.com/app/104900> , <http://store.steampowered.com/app/266310> , <http://store.steampowered.com/app/440> , <http://store.steampowered.com/app/206500> , <http://store.steampowered.com/app/311400> , <http://store.steampowered.com/app/204360> , <http://store.steampowered.com/app/55230> , <http://store.steampowered.com/app/361630> , <http://store.steampowered.com/app/508550> , <http://store.steampowered.com/app/99900> , <http://store.steampowered.com/app/12750> , <http://store.steampowered.com/app/274900> , <http://store.steampowered.com/app/211500> , <http://store.steampowered.com/app/49520> , <http://store.steampowered.com/app/22380> , <http://store.steampowered.com/app/230410> , <http://store.steampowered.com/app/274170> , <http://store.steampowered.com/app/227940> , <http://store.steampowered.com/app/72730> , <http://store.steampowered.com/app/317470> ;
+        owl:sameAs  <http://steamcommunity.com/id/RastaBacon> .
+
+<http://github.com/giorgospetkakis/sage/#hasTagID>
+        a                   owl:FunctionalProperty , owl:InverseFunctionalProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Tag> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#TagID> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasTagID> .
+
+<http://github.com/giorgospetkakis/sage/#belongsTo>
+        a                   owl:FunctionalProperty , owl:DatatypeProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#MetaGroup> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#belongsTo> .
+
+<http://github.com/giorgospetkakis/sage/#hasAppID>
+        a                   owl:FunctionalProperty , owl:InverseFunctionalProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#AppID> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasAppID> .
+
+<http://github.com/giorgospetkakis/sage/#hasMetaGroupID>
+        a                   owl:FunctionalProperty , owl:InverseFunctionalProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#MetaGroup> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#MetaGroupID> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasMetaGroupID> .
+
+<http://github.com/giorgospetkakis/sage/#hasFirstName>
+        a                   owl:FunctionalProperty , owl:DatatypeProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#Title> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasFirstName> .
+
+<http://github.com/giorgospetkakis/sage/#hasFavorite>
+        a                   owl:DatatypeProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         "http://xmlns.com/foaf/spec/#term_Person" ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasFavorite> ;
+        owl:inverseOf       <http://github.com/giorgospetkakis/sage/#isFavoredBy> .
+
+<http://github.com/giorgospetkakis/sage/#hasDescription>
+        a                   owl:FunctionalProperty , owl:DatatypeProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Tag> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#TagDescription> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasDescription> .
+
+<http://github.com/giorgospetkakis/sage/#hasTag>
+        a                   owl:DatatypeProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         <http://github.com/giorgospetkakis/sage/#Tag> , rdfs:Resource , owl:Thing ;
+        rdfs:range          <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        rdfs:subPropertyOf  <http://github.com/giorgospetkakis/sage/#hasTag> ;
+        owl:inverseOf       <http://github.com/giorgospetkakis/sage/#isTagOf> .
+
+<http://store.steampowered.com/app/12210>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12210> .
+
+<http://store.steampowered.com/app/321040>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/321040> .
+
+<http://store.steampowered.com/app/20500>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/20500> .
+
+<http://store.steampowered.com/app/40380>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/40380> .
+
+<http://store.steampowered.com/app/259080>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/259080> .
+
+<http://store.steampowered.com/app/219150>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/219150> .
+
+<http://store.steampowered.com/app/113400>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/113400> .
+
+<http://store.steampowered.com/app/346010>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/346010> .
+
+<http://store.steampowered.com/app/346900>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/346900> .
+
+<http://store.steampowered.com/app/291480>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/291480> .
+
+<http://store.steampowered.com/app/243870>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/243870> .
+
+<http://store.steampowered.com/app/214420>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/214420> .
+
+<http://store.steampowered.com/app/11390>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/11390> .
+
+<http://store.steampowered.com/app/271290>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/271290> .
+
+<http://store.steampowered.com/app/266430>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/266430> .
+
+<http://store.steampowered.com/app/343330>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/343330> .
+
+<http://store.steampowered.com/app/12100>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12100> .
+
+<http://store.steampowered.com/app/250420>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/250420> .
+
+<http://store.steampowered.com/app/225540>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/225540> .
+
+<http://store.steampowered.com/app/291550>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/291550> .
+
+<http://store.steampowered.com/app/298240>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/298240> .
+
+<http://store.steampowered.com/app/264710>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/264710> .
+
+<http://store.steampowered.com/app/271590>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/271590> .
+
+<http://store.steampowered.com/app/338180>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/338180> .
+
+<http://store.steampowered.com/app/4000>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/4000> .
+
+<http://store.steampowered.com/app/302590>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/302590> .
+
+<http://store.steampowered.com/app/24200>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/24200> .
+
+<http://store.steampowered.com/app/322500>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/322500> .
+
+<http://store.steampowered.com/app/581200>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/581200> .
+
+<http://store.steampowered.com/app/280790>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/280790> .
+
+<http://store.steampowered.com/app/436520>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/436520> .
+
+<http://store.steampowered.com/app/24960>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/24960> .
+
+<http://store.steampowered.com/app/12250>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12250> .
+
+<http://store.steampowered.com/app/304930>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/304930> .
+
+<http://store.steampowered.com/app/46500>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/46500> .
+
+<http://store.steampowered.com/app/12230>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12230> .
+
+<http://store.steampowered.com/app/2420>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/2420> .
+
+<http://store.steampowered.com/app/267940>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/267940> .
+
+<http://store.steampowered.com/app/444090>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/444090> .
+
+<http://store.steampowered.com/app/44690>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/44690> .
+
+<http://store.steampowered.com/app/207020>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/207020> .
+
+<http://store.steampowered.com/app/238070>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/238070> .
+
+<http://store.steampowered.com/app/218620>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/218620> .
+
+<http://store.steampowered.com/app/301520>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/301520> .
+
+<http://store.steampowered.com/app/497180>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/497180> .
+
+<http://store.steampowered.com/app/21960>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/21960> .
+
+<http://store.steampowered.com/app/223470>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/223470> .
+
+<http://store.steampowered.com/app/310370>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/310370> .
+
+<http://store.steampowered.com/app/385270>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/385270> .
+
+<http://store.steampowered.com/app/22470>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/22470> .
+
+<http://store.steampowered.com/app/1840>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/1840> .
+
+<http://store.steampowered.com/app/293500>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/293500> .
+
+<http://store.steampowered.com/app/333930>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/333930> .
+
+<http://store.steampowered.com/app/307690>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/307690> .
+
+<http://store.steampowered.com/app/12120>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12120> .
+
+<http://store.steampowered.com/app/258180>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/258180> .
+
+<http://store.steampowered.com/app/335330>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/335330> .
+
+<http://store.steampowered.com/app/6880>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/6880> .
+
+<http://store.steampowered.com/app/397100>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/397100> .
+
+<http://store.steampowered.com/app/24240>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/24240> .
+
+<http://store.steampowered.com/app/6860>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/6860> .
+
+<http://store.steampowered.com/app/457330>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/457330> .
+
+<http://store.steampowered.com/app/209870>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/209870> .
+
+<http://store.steampowered.com/app/239220>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/239220> .
+
+<http://store.steampowered.com/app/327890>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/327890> .
+
+<http://store.steampowered.com/app/210770>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/210770> .
+
+<http://store.steampowered.com/app/218230>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/218230> .
+
+<http://store.steampowered.com/app/9480>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/9480> .
+
+<http://store.steampowered.com/app/578310>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/578310> .
+
+<http://store.steampowered.com/app/227300>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/227300> .
+
+<http://store.steampowered.com/app/417860>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/417860> .
+
+<http://store.steampowered.com/app/351800>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/351800> .
+
+<http://store.steampowered.com/app/368720>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/368720> .
+
+<http://store.steampowered.com/app/211740>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/211740> .
+
+<http://store.steampowered.com/app/359800>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/359800> .
+
+<http://store.steampowered.com/app/9930>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/9930> .
+
+<http://store.steampowered.com/app/209520>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/209520> .
+
+<http://store.steampowered.com/app/267960>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/267960> .
+
+<http://store.steampowered.com/app/336250>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/336250> .
+
+<http://store.steampowered.com/app/12600>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12600> .
+
+<http://store.steampowered.com/app/368900>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/368900> .
+
+<http://store.steampowered.com/app/338000>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/338000> .
+
+<http://store.steampowered.com/app/342980>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/342980> .
+
+<http://store.steampowered.com/app/204630>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/204630> .
+
+<http://store.steampowered.com/app/70000>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/70000> .
+
+<http://store.steampowered.com/app/342480>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/342480> .
+
+<http://store.steampowered.com/app/72740>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/72740> .
+
+<http://store.steampowered.com/app/224600>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/224600> .
+
+<http://store.steampowered.com/app/39000>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/39000> .
+
+<http://store.steampowered.com/app/19900>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/19900> .
+
+<http://store.steampowered.com/app/338540>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/338540> .
+
+<http://store.steampowered.com/app/11020>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/11020> .
+
+<http://store.steampowered.com/app/200210>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/200210> .
+
+<http://store.steampowered.com/app/407840>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/407840> .
+
+<http://store.steampowered.com/app/1250>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/1250> .
+
+<http://store.steampowered.com/app/6060>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/6060> .
+
+<http://store.steampowered.com/app/2700>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/2700> .
+
+<http://store.steampowered.com/app/12240>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12240> .
+
+<http://store.steampowered.com/app/2430>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/2430> .
+
+<http://store.steampowered.com/app/332070>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/332070> .
+
+<http://store.steampowered.com/app/208090>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/208090> .
+
+<http://store.steampowered.com/app/596350>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/596350> .
+
+<http://store.steampowered.com/app/65780>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/65780> .
+
+<http://store.steampowered.com/app/241560>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/241560> .
+
+<http://store.steampowered.com/app/12220>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12220> .
+
+<http://store.steampowered.com/app/9900>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/9900> .
+
+<http://store.steampowered.com/app/8190>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/8190> .
+
+<http://store.steampowered.com/app/236390>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/236390> .
+
+<http://store.steampowered.com/app/730>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/730> .
+
+<http://store.steampowered.com/app/530700>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/530700> .
+
+<http://store.steampowered.com/app/302830>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/302830> .
+
+<http://store.steampowered.com/app/354850>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/354850> .
+
+<http://store.steampowered.com/app/292410>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/292410> .
+
+<http://store.steampowered.com/app/304050>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/304050> .
+
+<http://store.steampowered.com/app/35420>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/35420> .
+
+<http://store.steampowered.com/app/104700>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/104700> .
+
+<http://store.steampowered.com/app/343840>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/343840> .
+
+<http://store.steampowered.com/app/223750>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/223750> .
+
+<http://store.steampowered.com/app/2400>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/2400> .
+
+<http://store.steampowered.com/app/248570>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/248570> .
+
+<http://store.steampowered.com/app/12110>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12110> .
+
+<http://store.steampowered.com/app/51100>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/51100> .
+
+<http://store.steampowered.com/app/105600>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/105600> .
+
+<http://store.steampowered.com/app/293540>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/293540> .
+
+<http://store.steampowered.com/app/212070>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/212070> .
+
+<http://store.steampowered.com/app/331710>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/331710> .
+
+<http://store.steampowered.com/app/109400>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/109400> .
+
+<http://store.steampowered.com/app/537180>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/537180> .
+
+<http://store.steampowered.com/app/308580>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/308580> .
+
+<http://store.steampowered.com/app/46510>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/46510> .
+
+<http://store.steampowered.com/app/500290>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/500290> .
+
+<http://store.steampowered.com/app/263060>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/263060> .
+
+<http://store.steampowered.com/app/65730>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/65730> .
+
+<http://store.steampowered.com/app/206210>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/206210> .
+
+<http://store.steampowered.com/app/265300>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/265300> .
+
+<http://store.steampowered.com/app/104900>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/104900> .
+
+<http://store.steampowered.com/app/266310>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/266310> .
+
+<http://store.steampowered.com/app/440>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/440> .
+
+<http://store.steampowered.com/app/206500>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/206500> .
+
+<http://store.steampowered.com/app/311400>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/311400> .
+
+<http://store.steampowered.com/app/204360>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/204360> .
+
+<http://store.steampowered.com/app/55230>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/55230> .
+
+<http://store.steampowered.com/app/361630>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/361630> .
+
+<http://store.steampowered.com/app/508550>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/508550> .
+
+<http://store.steampowered.com/app/99900>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/99900> .
+
+<http://store.steampowered.com/app/12750>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/12750> .
+
+<http://store.steampowered.com/app/274900>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/274900> .
+
+<http://store.steampowered.com/app/211500>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/211500> .
+
+<http://store.steampowered.com/app/49520>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/49520> .
+
+<http://store.steampowered.com/app/22380>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/22380> .
+
+<http://store.steampowered.com/app/230410>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/230410> .
+
+<http://store.steampowered.com/app/227940>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/227940> .
+
+<http://store.steampowered.com/app/274170>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/274170> .
+
+<http://store.steampowered.com/app/72730>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/72730> .
+
+<http://store.steampowered.com/app/317470>
+        a           <http://github.com/giorgospetkakis/sage/#Game> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#isOwned>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://store.steampowered.com/app/317470> .
+
+<http://steamcommunity.com/profiles/76561198278239968>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198278239968> .
+
+<http://steamcommunity.com/profiles/76561198153729712>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198153729712> .
+
+<http://steamcommunity.com/profiles/76561198235712016>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198235712016> .
+
+<http://steamcommunity.com/profiles/76561198287740128>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198287740128> .
+
+<http://steamcommunity.com/profiles/76561198118183184>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198118183184> .
+
+<http://steamcommunity.com/profiles/76561198079968832>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198079968832> .
+
+<http://steamcommunity.com/profiles/76561198169214416>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198169214416> .
+
+<http://steamcommunity.com/profiles/76561198110579392>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198110579392> .
+
+<http://steamcommunity.com/profiles/76561198058196720>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198058196720> .
+
+<http://steamcommunity.com/profiles/76561198275585296>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198275585296> .
+
+<http://steamcommunity.com/profiles/76561198308769424>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198308769424> .
+
+<http://steamcommunity.com/profiles/76561198064892576>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198064892576> .
+
+<http://steamcommunity.com/profiles/76561198355682912>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198355682912> .
+
+<http://steamcommunity.com/profiles/76561198288683200>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198288683200> .
+
+<http://steamcommunity.com/profiles/76561198119487776>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198119487776> .
+
+<http://steamcommunity.com/profiles/76561198106171184>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198106171184> .
+
+<http://steamcommunity.com/profiles/76561198136463344>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198136463344> .
+
+<http://steamcommunity.com/profiles/76561198198806032>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198198806032> .
+
+<http://steamcommunity.com/profiles/76561198212248688>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198212248688> .
+
+<http://steamcommunity.com/profiles/76561198161384832>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198161384832> .
+
+<http://steamcommunity.com/profiles/76561198043022832>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198043022832> .
+
+<http://steamcommunity.com/profiles/76561198088716752>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198088716752> .
+
+<http://steamcommunity.com/profiles/76561198050032528>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198050032528> .
+
+<http://steamcommunity.com/profiles/76561198168731280>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198168731280> .
+
+<http://steamcommunity.com/profiles/76561197994424048>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561197994424048> .
+
+<http://steamcommunity.com/profiles/76561198317334336>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198317334336> .
+
+<http://steamcommunity.com/profiles/76561198098552240>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198098552240> .
+
+<http://steamcommunity.com/profiles/76561198274295792>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , rdfs:Resource , owl:Thing ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198274295792> .
+
+<http://steamcommunity.com/profiles/76561198103642496>
+        a           "http://xmlns.com/foaf/spec/#term_Person" ;
+        a           <http://github.com/giorgospetkakis/sage/#Player> , owl:Thing , rdfs:Resource ;
+        <http://github.com/giorgospetkakis/sage/#hasFriend>
+                <http://steamcommunity.com/id/RastaBacon> ;
+        owl:sameAs  <http://steamcommunity.com/profiles/76561198103642496> .
+
+owl:AnnotationProperty
+        a       rdfs:Class , rdfs:Resource .
+
+rdfs:seeAlso  a             rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:seeAlso .
+
+rdfs:Container  a  rdfs:Class , rdfs:Resource .

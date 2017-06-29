@@ -17,29 +17,27 @@ import org.apache.jena.vocabulary.RDFS;
  */
 public class Axioms {
 	private static OntModel axiomModel;
-	private final static String NS = "http://www.skidmore.edu/~gpetkaki/#";
+	private final static String NS = "http://github.com/giorgospetkakis/sage/#";
 	private final static String FOAF = "http://xmlns.com/foaf/spec/#";
 
-	public static OntClass player; 	
-	public static OntClass game; 	
-	public static OntClass tag; 		                    
-	public static OntClass metaGroup;                  
-	public static OntClass userID; 	
-	public static OntClass appID; 	
-	public static OntClass tagID; 	
-	public static OntClass metaGroupID;                  
-	public static OntClass firstName;
-	public static OntClass lastName; 
-	public static OntClass nick; 	                   
-	public static OntClass title; 	                   
+	public static OntClass player;
+	public static OntClass game;
+	public static OntClass tag;
+	public static OntClass metaGroup;
+	public static OntClass userID;
+	public static OntClass appID;
+	public static OntClass tagID;
+	public static OntClass metaGroupID;
+	public static OntClass fullName;
+	public static OntClass nick;
+	public static OntClass title;
 	public static OntClass description;
 	
 	public static InverseFunctionalProperty hasUserID;
 	public static InverseFunctionalProperty hasAppID;
 	public static InverseFunctionalProperty hasTagID;
 	public static InverseFunctionalProperty hasMetaGroupID;
-	public static DatatypeProperty hasFirstName;
-	public static DatatypeProperty hasLastName;
+	public static DatatypeProperty hasFullName;
 	public static DatatypeProperty hasNickname;
 	public static DatatypeProperty belongsTo;
 	public static DatatypeProperty hasTitle;
@@ -84,8 +82,7 @@ public class Axioms {
 		tagID = axiomModel.createClass(NS+"TagID");
 		metaGroupID = axiomModel.createClass(NS+"MetaGroupID");
 		
-		firstName = axiomModel.createClass(FOAF+"term_firstName");
-		lastName = axiomModel.createClass(FOAF+"term_lastName");
+		fullName = axiomModel.createClass(FOAF+"term_fullName");
 		nick = axiomModel.createClass(FOAF+"term_nick");
 		
 		title = axiomModel.createClass(NS+"Title");
@@ -113,13 +110,9 @@ public class Axioms {
 		hasMetaGroupID.addDomain(metaGroup);
 		hasMetaGroupID.addRange(metaGroupID);
 		
-		hasFirstName = axiomModel.createDatatypeProperty(NS+"hasFirstName", true);
-		hasFirstName.addDomain(player);
-		hasFirstName.addRange(firstName);
-		
-		hasLastName = axiomModel.createDatatypeProperty(NS+"hasLastName", true);
-		hasLastName.addDomain(player);
-		hasLastName.addRange(lastName);
+		hasFullName = axiomModel.createDatatypeProperty(NS+"hasFullName", true);
+		hasFullName.addDomain(player);
+		hasFullName.addRange(fullName);
 		
 		hasNickname = axiomModel.createDatatypeProperty(NS+"hasNickname", false);
 		hasNickname.addDomain(player);

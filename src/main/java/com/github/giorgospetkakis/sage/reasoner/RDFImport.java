@@ -1,5 +1,8 @@
 package com.github.giorgospetkakis.sage.reasoner;
 
+import com.github.koraktor.steamcondenser.community.SteamGame;
+import com.github.koraktor.steamcondenser.community.SteamId;
+
 /**
  * An interface for importing the player / game beans onto the reasoner platform.
  * 
@@ -13,21 +16,7 @@ public interface RDFImport {
 	 * 
 	 * @param player
 	 */
-	public void addPlayer(Player player);
+	public void addPlayer(SteamId player);
 	
-	/**
-	 * Adds a list of friends to a player.
-	 * 
-	 * @param player
-	 * @param friends
-	 */
-	public void addFriends(Player player, Player[] friends);
-	
-	/**
-	 * Adds a list of owned games to a player.
-	 * 
-	 * @param player
-	 * @param games
-	 */
-	public void addOwnedGames(Player player, Game[] games);
+	public void addGame(SteamGame game);
 }
