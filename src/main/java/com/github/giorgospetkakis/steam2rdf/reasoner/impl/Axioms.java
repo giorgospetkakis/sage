@@ -1,4 +1,4 @@
-package com.github.giorgospetkakis.sage.reasoner.impl;
+package com.github.giorgospetkakis.steam2rdf.reasoner.impl;
 
 import org.apache.jena.ontology.DatatypeProperty;
 import org.apache.jena.ontology.InverseFunctionalProperty;

@@ -1,9 +1,9 @@
-package com.github.giorgospetkakis.sage;
+package com.github.giorgospetkakis.steam2rdf;
 
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
-import com.github.giorgospetkakis.sage.reasoner.ReasonerFactory;
+import com.github.giorgospetkakis.steam2rdf.reasoner.ReasonerFactory;
 import com.github.koraktor.steamcondenser.exceptions.SteamCondenserException;
 import com.github.koraktor.steamcondenser.scraper.WebScraper;
 
@@ -35,9 +35,9 @@ public class Sage
 //		}
     	try {
     		
-    		FileOutputStream out = new FileOutputStream("page.html");
+    		FileOutputStream out = new FileOutputStream("page.xhtml");
     		System.setOut(new PrintStream(out));
-			System.out.println(WebScraper.load("store.steampowered.com", "app", "35700", null, null));
+			System.out.println(WebScraper.load("steamcommunity.com", "app", "35700", "screenshots", null));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

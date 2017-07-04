@@ -1,4 +1,4 @@
-package com.github.giorgospetkakis.sage.reasoner;
+package com.github.giorgospetkakis.steam2rdf.reasoner;
 
 import com.github.koraktor.steamcondenser.community.SteamGame;
 import com.github.koraktor.steamcondenser.community.SteamId;

@@ -3,4 +3,4 @@
  * @author giorgos
  *
  */
-package com.github.giorgospetkakis.sage.reasoner;
+package com.github.giorgospetkakis.steam2rdf.reasoner;

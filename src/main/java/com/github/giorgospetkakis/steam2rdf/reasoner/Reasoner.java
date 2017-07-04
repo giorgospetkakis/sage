@@ -1,4 +1,4 @@
-package com.github.giorgospetkakis.sage.reasoner;
+package com.github.giorgospetkakis.steam2rdf.reasoner;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -8,7 +8,7 @@ import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.log4j.Logger;
 
-import com.github.giorgospetkakis.sage.reasoner.impl.Axioms;
+import com.github.giorgospetkakis.steam2rdf.reasoner.impl.Axioms;
 import com.github.koraktor.steamcondenser.community.SteamGame;
 import com.github.koraktor.steamcondenser.community.SteamId;
 import com.github.koraktor.steamcondenser.exceptions.SteamCondenserException;
