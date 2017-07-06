@@ -22,5 +22,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/steam-condenser-java/target/steam-condenser-1.3.9.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,6 +1,8 @@
 package com.github.giorgospetkakis.steam2rdf.reasoner;
 
+import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.rdf.model.ModelFactory;
 
 import com.github.koraktor.steamcondenser.community.SteamGame;
 import com.github.koraktor.steamcondenser.community.SteamId;
@@ -10,7 +12,7 @@ import com.github.koraktor.steamcondenser.scraper.SteamUserDefinedTag;
  * A public factory for the Reasoner.
  * Recommended way of adding nodes to the ontology
  * 
- * @author giorgospetkakis
+ * @author Giorgos Petkakis
  *
  */
 public class ReasonerFactory {
@@ -88,5 +90,13 @@ public class ReasonerFactory {
 		for(SteamUserDefinedTag t : tags){
 			theReasoner.addTag(t);
 		}
+	}
+	/**
+	 * Returns an immutable version of the current model.
+	 * @return The current ontology model
+	 */
+	public OntModel getModel(){
+		final OntModel model =  ModelFactory.createOntologyModel(theReasoner.model.getSpecification(), theReasoner.model);
+		return model;
 	}
 }

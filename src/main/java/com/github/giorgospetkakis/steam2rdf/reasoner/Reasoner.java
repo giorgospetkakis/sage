@@ -12,7 +12,7 @@ import com.github.koraktor.steamcondenser.exceptions.SteamCondenserException;
 import com.github.koraktor.steamcondenser.scraper.SteamUserDefinedTag;
 
 /**
- * The main ontology class- Holds graph information and coordinates inferencing.
+ * Holds graph information and coordinates inferencing.
  * 
  * @author giorgospetkakis
  *
@@ -42,10 +42,10 @@ public class Reasoner {
 		//Add basic player info
 		Resource p = 
 				model.createResource(
-					player.getBaseUrl())
-						.addProperty(Axioms.hasUserID, player.getId().toString())
-						.addProperty(Axioms.hasNickname, player.getNickname())
-						.addProperty(Axioms.hasFullName, player.getRealName())
+						player.getBaseUrl())
+							.addProperty(Axioms.hasUserID, player.getId().toString())
+							.addProperty(Axioms.hasNickname, player.getNickname())
+							.addProperty(Axioms.hasFullName, player.getRealName())
 		;
 		
 		//Add Friends List
@@ -53,7 +53,7 @@ public class Reasoner {
 			for(SteamId s : player.getFriends())
 				p.addProperty(Axioms.hasFriend, model.createResource(s.getBaseUrl()));
 		} catch (SteamCondenserException e) {
-			logger.error("Could not load friends for" + p.getURI());
+			logger.error("Could not load friends for " + p.getURI());
 		}
 		
 		//Add Games List
@@ -61,7 +61,7 @@ public class Reasoner {
 			for(SteamGame s : player.getGames().values())
 				p.addProperty(Axioms.owns, model.createResource(s.getStoreUrl()));
 		} catch (SteamCondenserException e) {
-			logger.error("Could not load friends for" + p.getURI());
+			logger.error("Could not load games for " + p.getURI());
 		}
 	}
 	
@@ -70,7 +70,18 @@ public class Reasoner {
 	 * @param game The game to be added
 	 */
 	protected void addGame(SteamGame game) {
-		
+		//Add basic game info
+		Resource g = 
+				model.createResource(
+						game.getStoreUrl())
+							.addProperty(Axioms.hasAppID, ""+game.getAppId());
+		//Add user-defined tags
+		try {
+			for(SteamUserDefinedTag t : game.getTags())
+				g.addProperty(Axioms.hasTag, model.createResource(t.getDescription()));
+		} catch (SteamCondenserException e) {
+			logger.error("Could not load tags for " + g.getURI());
+		}
 	}
 	
 	/**
@@ -78,6 +89,11 @@ public class Reasoner {
 	 * @param tag The tag to be added
 	 */
 	protected void addTag(SteamUserDefinedTag tag) {
-		
+		Resource t = 
+				model.createResource(
+						tag.getStoreUrl())
+							.addProperty(Axioms.hasDescription, tag.getDescription())
+							.addProperty(Axioms.hasTagID, ""+tag.getId())
+							.addProperty(Axioms.isInLanguage, tag.getLanguage());
 	}
 }

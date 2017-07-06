@@ -11,11 +11,12 @@ import org.apache.jena.vocabulary.RDFS;
 
 /**
  * The Axiomatic relationships between different Steam entities.
+ * TODO: Clean up property assignment by removing unnecessary code
  * 
  * @author giorgospetkakis
  *
  */
-public class Axioms {
+public abstract class Axioms {
 	/**
 	 * The Axiom ontology model.
 	 */
@@ -78,6 +79,10 @@ public class Axioms {
 	 */
 	public static OntClass description;
 	/**
+	 * A natural language used to descibe a <code>user-defined tag</code>.
+	 */
+	public static OntClass language;
+	/**
 	 * The property that describes a Steam <code>player</code> being assigned a unique ID.
 	 */
 	public static InverseFunctionalProperty hasUserID;
@@ -139,6 +144,11 @@ public class Axioms {
 	 * been assigned to a <code>game</code>.
 	 */
 	public static DatatypeProperty isTagOf;
+	/**
+	 * The property that describes a Steam <code>user-defined tag</code> being
+	 * in a specific language subdomain.
+	 */
+	public static DatatypeProperty isInLanguage;
 	
 	static {
 		//==========================
@@ -219,6 +229,10 @@ public class Axioms {
 		hasTag.addDomain(tag);
 		hasTag.addRange(app);
 		hasTag.addInverseOf(isTagOf);
+		
+		isInLanguage = axiomModel.createDatatypeProperty(NS+"isInLanguage");
+		isInLanguage.addDomain(tag);
+		isInLanguage.addRange(language);
 	}
 	
 	/**
