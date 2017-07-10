@@ -88,6 +88,7 @@ public class Reasoner {
 	 * Adds a tag to the ontology.
 	 * @param tag The tag to be added
 	 */
+	@SuppressWarnings("unused")
 	protected void addTag(SteamUserDefinedTag tag) {
 		Resource t = 
 				model.createResource(

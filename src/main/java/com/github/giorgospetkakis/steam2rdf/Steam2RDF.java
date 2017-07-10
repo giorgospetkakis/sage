@@ -27,13 +27,15 @@ public abstract class Steam2RDF
 	//Constructors
 	
 	/**
-	 * TODO
+	 * Creates an instance of Steam2RDF.
 	 */
 	public Steam2RDF(){
 		reasonerFactory = new ReasonerFactory();
 	}
 	/**
-	 * TODO
+	 * Creates an instance of Steam2RDF with the chosen
+	 * specification.
+	 * @param spec The chosen OntModel Specification
 	 */
 	public Steam2RDF(OntModelSpec spec){
 		reasonerFactory = new ReasonerFactory(spec);
